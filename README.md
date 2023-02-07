@@ -1,16 +1,7 @@
 # divapp
 
-A new Flutter project.
+The new chat App for women.
 
-## Getting Started
+## About the app.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project was created to provide women a good place to the exchange of cultures and learning another languages. It's totally for women and the app has security checks to ensure that all the women who uses this app feel free to connect and chat. 
