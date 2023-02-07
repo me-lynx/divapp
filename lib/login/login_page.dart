@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import '../chat/chat_page.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -30,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                     child: BackdropFilter(
                       filter: _imageFilter,
                       child: Padding(
-                        padding: const EdgeInsets.all(30),
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: Center(
                           child: Container(
                             width: double.maxFinite,
@@ -38,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                             decoration: BoxDecoration(
                               color: Colors.white60,
                               borderRadius: BorderRadius.circular(20),
-                              backgroundBlendMode: BlendMode.srcIn,
+                              backgroundBlendMode: BlendMode.colorDodge,
                             ),
                             child: Column(
                               children: [
@@ -71,13 +73,23 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                                 Container(
-                                  color: Colors.black,
+                                  width: double.maxFinite,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black45,
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
                                   child: TextButton(
                                     child: const Text(
                                       'LOGIN',
                                       style: TextStyle(color: Colors.white),
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => ChatPage()),
+                                      );
+                                    },
                                   ),
                                 ),
                               ],
@@ -99,5 +111,5 @@ class _LoginPageState extends State<LoginPage> {
   Image get _image => Image.asset("assets/images/woman_home.jpg");
 
   ImageFilter get _imageFilter =>
-      ImageFilter.blur(sigmaX: 8, sigmaY: 8, tileMode: TileMode.repeated);
+      ImageFilter.blur(sigmaX: 4, sigmaY: 4, tileMode: TileMode.repeated);
 }
